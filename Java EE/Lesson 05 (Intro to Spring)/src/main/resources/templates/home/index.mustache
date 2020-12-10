@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Spring Boot</h1>
+<!--    <h3>{{name}}</h3>-->
+<!--    {{#age}}-->
+<!--        <h4>{{age}}y.o.</h4>-->
+<!--    {{/age}}-->
+
+    <!-- Отображение списка объектов -->
+    <ul>
+        {{#people}}
+            <li>{{lastName}} {{firstName}} {{age}}.y.o</li>
+        {{/people}}
+    </ul>
+
+    <!-- Отображение списка строк -->
+    <ul>
+        {{#items}}
+            <li>{{.}}</li>
+        {{/items}}
+    </ul>
+
+
+    <form method="post">
+        <div>
+            <label>First name:
+                <input type="text" name="firstName" placeholder="Enter your first name">
+            </label>
+        </div>
+        <div>
+            <label>Last name:
+                <input type="text" name="lastName" placeholder="Enter your last name">
+            </label>
+        </div>
+        <div>
+            <label>Age:
+                <input type="number" name="age" placeholder="Enter your age">
+            </label>
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
